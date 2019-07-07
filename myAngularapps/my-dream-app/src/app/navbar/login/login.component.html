@@ -1,0 +1,24 @@
+<div class="container"> 
+<div [hidden]="loggedIn" >
+        <mat-grid-list cols="6" >
+                <mat-grid-tile [colspan] ="1"></mat-grid-tile>
+                <mat-grid-tile [colspan] ="4">
+                        <form #login = "ngForm" (ngSubmit) = "onsumbit(login.value)" >
+                                <mat-form-field class="example-full-width">
+                                        <input matInput placeholder="Email " name = username value="enter your email" [(ngModel)]="credential.username" >
+                                      </mat-form-field>
+                                        <div class="example-full-width">
+
+                                        </div>
+                                      <mat-form-field class="example-full-width">
+                                <input  matInput  class ="pass" type = "password" value = "password" name = "password" placeholder = "Password "  [(ngModel)] ="credential.password" >
+                        </mat-form-field>
+                        <div class="example-full-width">
+                                                
+                                </div>
+                                <input type = "submit" value = "submit">
+                              </form>
+                </mat-grid-tile>
+              </mat-grid-list>
+</div>
+</div>

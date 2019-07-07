@@ -1,0 +1,12 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+  .button{
+     background-color: rgb(44, 62, 80);
+  }
+
+  .buttonbrder{
+     /*border: 0.2px solid rgb(6, 6, 114);*/
+  }
