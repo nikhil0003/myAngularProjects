@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from 'src/app/service/login.service';
+//import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -24,6 +25,7 @@ export class LoginComponent implements OnInit {
     console.log(a);
       localStorage.setItem("X-Auth-Token",a.token);
      //location.reload();
+     
       
    },
    error=>{
@@ -31,12 +33,16 @@ export class LoginComponent implements OnInit {
    }
    );
   }
+  toggleLogout(){
+    this.loggedIn=false;
+  }
   ngOnInit() {
   this.loginService.checkSession().subscribe(
     res=>{
     this.loggedIn=true;
     },
     error =>{
+      console.log(error);
     this.loggedIn=false;
     }
   );

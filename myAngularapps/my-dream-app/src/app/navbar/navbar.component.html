@@ -5,6 +5,5 @@
         <span class="example-fill-remaining-space"></span>
       <span [hidden]= "!loggedIn" class ="buttonbrder"> <button mat-flat-button color = "primary">View</button> </span>  
       <span [hidden]= "!loggedIn"> <button mat-flat-button color = "primary">Add a book</button>  </span>  
-      <span [hidden]= "!loggedIn"> <button mat-flat-button color = "primary">Logout</button>   </span> 
+      <span [hidden]= "!loggedIn"> <button mat-flat-button color = "primary" (click)="toggle()">Logout</button>   </span> 
 </mat-toolbar>
-<button mat-button class="button" (click)= "toggleDisplay()">Login!</button>
