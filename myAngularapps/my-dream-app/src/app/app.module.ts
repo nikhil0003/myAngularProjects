@@ -15,6 +15,15 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { CookieService } from 'ngx-cookie-service';
+import { AddNewBookComponent } from './components/add-new-book/add-new-book.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import{AddBookService} from 'src/app/service/add-book.service';
+import {UploadImageService} from 'src/app/service/upload-image.service';
+import { BookListComponent } from './components/book-list/book-list.component';
+
+
+
 
 
 
@@ -22,7 +31,9 @@ import { CookieService } from 'ngx-cookie-service';
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent
+    LoginComponent,
+    AddNewBookComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +44,11 @@ import { CookieService } from 'ngx-cookie-service';
     AppRoutingModule,
     MatGridListModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatSlideToggleModule
   ],
-  providers: [LoginService,CookieService ],
+  providers: [LoginService,CookieService,AddBookService,UploadImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

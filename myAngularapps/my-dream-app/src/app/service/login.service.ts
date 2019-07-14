@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-//import {Observable} from "rxjs/Observable";
 //import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
@@ -27,6 +26,7 @@ const httpOptions = {
     'Authorization': basicHeader
   })
 };
+
 localStorage.setItem("Authorization",basicHeader);
 return this.http.get(url,httpOptions);
 }
@@ -34,14 +34,23 @@ return this.http.get(url,httpOptions);
 checkSession(){
   let url = 'http://localhost:8080/checkSession';
  let  b = localStorage.getItem('Authorization');
- const httpOptions = {
+ 
+  const httpOptions = {
     headers: new HttpHeaders({
       'Authorization': b
     })
   };
   return this.http.get(url,httpOptions);
-
-}
-
-  
+ }
+logout(){
+  let url = 'http://localhost:8080/checkSession';
+  let  b = localStorage.getItem('Authorization');
+ 
+   const httpOptions = {
+     headers: new HttpHeaders({
+       'Authorization': b
+     })
+   };
+   return this.http.get(url,httpOptions);
+  } 
 }

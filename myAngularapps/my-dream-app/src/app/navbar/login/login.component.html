@@ -1,5 +1,5 @@
 <div class="container"> 
-<div [hidden]="loggedIn" >
+<div *ngIf="!loggedIn" >
         <mat-grid-list cols="6" >
                 <mat-grid-tile [colspan] ="1"></mat-grid-tile>
                 <mat-grid-tile [colspan] ="4">

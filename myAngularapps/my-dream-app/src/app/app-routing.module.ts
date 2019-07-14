@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from 'src/app/navbar/login/login.component';
+import{AddNewBookComponent} from 'src/app/components/add-new-book/add-new-book.component';
 const routes: Routes = [
   {
     path: '',
@@ -9,6 +10,9 @@ const routes: Routes = [
   }, {
     path: 'login',
     component: LoginComponent
+  },{
+    path:'addnewbook',
+    component:AddNewBookComponent
   }
 ];
 @NgModule({
