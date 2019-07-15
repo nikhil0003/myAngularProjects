@@ -3,7 +3,7 @@
         
         <!-- This fills the remaining space of the current row -->
         <span class="example-fill-remaining-space"></span>
-      <span [hidden]= "loggedIn" class ="buttonbrder"> <button mat-flat-button color = "primary">View</button> </span>  
+      <span [hidden]= "loggedIn" class ="buttonbrder"> <button mat-flat-button color = "primary"routerLink ="/viewbooklist">View</button> </span>  
       <span [hidden]= "loggedIn"> <button mat-flat-button color = "primary" routerLink ="/addnewbook">Add a book</button>  </span>  
       <span [hidden]= "loggedIn"> <button mat-flat-button color = "primary" (click)="toggleLogout()">Logout</button>   </span> 
 </mat-toolbar>

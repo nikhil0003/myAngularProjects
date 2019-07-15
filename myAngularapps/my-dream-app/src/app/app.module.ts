@@ -21,6 +21,11 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import{AddBookService} from 'src/app/service/add-book.service';
 import {UploadImageService} from 'src/app/service/upload-image.service';
 import { BookListComponent } from './components/book-list/book-list.component';
+import{GetBookListService} from 'src/app/service/get-book-list.service';
+import {MatTableModule} from '@angular/material/table';
+import { ViewBookComponent } from './components/view-book/view-book.component';
+import{GetBookService} from 'src/app/service/get-book.service';
+import {MatListModule} from '@angular/material/list';
 
 
 
@@ -33,7 +38,8 @@ import { BookListComponent } from './components/book-list/book-list.component';
     NavbarComponent,
     LoginComponent,
     AddNewBookComponent,
-    BookListComponent
+    BookListComponent,
+    ViewBookComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +52,11 @@ import { BookListComponent } from './components/book-list/book-list.component';
     FormsModule,
     MatInputModule,
     MatSelectModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatTableModule,
+    MatListModule
   ],
-  providers: [LoginService,CookieService,AddBookService,UploadImageService],
+  providers: [LoginService,CookieService,AddBookService,UploadImageService,GetBookListService,GetBookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

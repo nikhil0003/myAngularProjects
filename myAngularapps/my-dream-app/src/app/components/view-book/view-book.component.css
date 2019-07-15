@@ -1,0 +1,24 @@
+.container{
+    position: static;
+    box-sizing: border-box;
+}
+.onestgrid{
+   
+    
+    
+    box-sizing: border-box;
+    
+}
+.other{
+    position: relative;
+    margin-top: 20%;
+    
+    box-sizing: border-box; 
+    border :5px red solid;
+}
+.other1{
+    position: relative;
+    margin-top: 20%;
+    
+    box-sizing: border-box;
+}
