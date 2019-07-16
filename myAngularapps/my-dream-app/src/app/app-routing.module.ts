@@ -6,12 +6,12 @@ import {BookListComponent} from  'src/app/components/book-list/book-list.compone
 import {ViewBookComponent} from 'src/app/components/view-book/view-book.component';
 const routes: Routes = [
   {
-    path: '',
-    redirectTo:"/login",
-    pathMatch:'full'
+    path : '',
+		redirectTo: '/login',
+		pathMatch: 'full'
   }, {
     path: "login",
-    component: LoginComponent
+		component: LoginComponent
   },{
     path:"addnewbook",
     component:AddNewBookComponent

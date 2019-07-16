@@ -7,8 +7,8 @@
         <mat-grid-list cols="9" rowHeight="100px">
             <mat-grid-tile  [colspan]="3" [rowspan]="5">
                 <div class="panel panel-default">
-                    <div class="panel-body">
-                        <img [src]="http://localhost:8080/book/image"+book.id  class="responsive-img" />
+                    <div class="panel-body">    
+                        <img [src]="'http://localhost:8080/book/image/'+book.id+''" class="responsive-img" />
                     </div>
                 </div>
             </mat-grid-tile>

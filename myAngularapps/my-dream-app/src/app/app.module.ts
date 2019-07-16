@@ -26,6 +26,8 @@ import {MatTableModule} from '@angular/material/table';
 import { ViewBookComponent } from './components/view-book/view-book.component';
 import{GetBookService} from 'src/app/service/get-book.service';
 import {MatListModule} from '@angular/material/list';
+import { EditBookComponent } from './components/edit-book/edit-book.component';
+import {EditBookService} from 'src/app/service/edit-book.service';
 
 
 
@@ -39,7 +41,8 @@ import {MatListModule} from '@angular/material/list';
     LoginComponent,
     AddNewBookComponent,
     BookListComponent,
-    ViewBookComponent
+    ViewBookComponent,
+    EditBookComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,7 @@ import {MatListModule} from '@angular/material/list';
     MatTableModule,
     MatListModule
   ],
-  providers: [LoginService,CookieService,AddBookService,UploadImageService,GetBookListService,GetBookService],
+  providers: [LoginService,CookieService,AddBookService,UploadImageService,GetBookListService,GetBookService,EditBookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,21 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
-
+import {Book} from 'src/app/models/book';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GetBookListService {
+export class EditBookService {
 
-  
+  constructor(private http : HttpClient) { }
 
-  constructor(private  http : HttpClient) { }
-
-
-  getbook(){
-
-    let url = 'http://localhost:8080/book/getbooklist';
+  editBook(book : Book){
+    let url = 'http://localhost:8080/book/update';
     let  b = localStorage.getItem('Authorization');
    
      const httpOptions = {
@@ -24,7 +20,7 @@ export class GetBookListService {
          'Authorization': b
        })
      };
-     console.log("before cal");
-     return this.http.get(url,httpOptions);
-    }
+     console.log("before edit bookservice cal");
+     return this.http.post(url,JSON.stringify(book),httpOptions);
+  }
 }

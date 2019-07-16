@@ -12,9 +12,11 @@ export class ViewBookComponent implements OnInit {
 
   private book : Book = new Book();
   private bookId :number;
-  private image : any [];
   constructor(private  getBookService : GetBookService,private route : ActivatedRoute ,private router : Router ) { }
 
+  onSelect(book : Book){
+    
+  }
 
 
   ngOnInit() {
@@ -32,18 +34,6 @@ export class ViewBookComponent implements OnInit {
 console.log(err);
       }
     );
-    /*this.getBookService.getImageofBook(this.bookId).subscribe(
-      res=>{
-        console.log("suessful in getting image");
-        console.log(res);
-      },
-      err=>{
-        console.log("failed in getting image");
-       console.log(err);
-      }
-    );*/
-
-    this.getBookService.getImageofBook(this.bookId);
   }
 
 }

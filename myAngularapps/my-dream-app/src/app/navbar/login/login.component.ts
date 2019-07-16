@@ -14,8 +14,6 @@ export class LoginComponent implements OnInit {
   constructor(private loginService : LoginService ) { }
   
   onsumbit(){
-    console.log(this.credential.username);
-    console.log(this.credential.password);
    this.loginService.sendCredential(this.credential.username,this.credential.password).subscribe(
      res => {
       console.log(JSON.stringify(res));

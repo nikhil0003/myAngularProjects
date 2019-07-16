@@ -22,6 +22,18 @@ export class UploadImageService {
   	this.filesToUpload = <Array<File>> fileInput.target.files;
   }
 
+  modify(bookId : number){
+console.log(this.filesToUpload);
+if(this.filesToUpload.length >0){
+	this.makeFileRequest("http://localhost:8080/book/add/image?id="+bookId, [], this.filesToUpload).then((result) => {
+		console.log(result);
+	}, (error) => {
+		console.log(error);
+	});
+
+}
+
+  }
   makeFileRequest(url:string, params:Array<string>, files:Array<File>) {
   	return new Promise((resolve, reject) => {
   		var formData:any = new FormData();
