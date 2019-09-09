@@ -14,8 +14,7 @@ export class EditBookComponent implements OnInit {
 
   private bookid :number;
   private book : Book = new Book();
-  private bookUpdated : boolean ;
-
+  private bookUpdated : boolean = false;
   constructor(
     private  uploadImageService : UploadImageService,
     private  Route : ActivatedRoute,
@@ -32,11 +31,12 @@ export class EditBookComponent implements OnInit {
          let strid = JSON.stringify(a.id);
          let inval = parseInt(strid);
         this.uploadImageService.modify(inval);
-        this.bookUpdated =true;
+        this.bookUpdated = false;
       }
       ,err =>{
         console.log("editBooks service in edit book component failed");
         console.log(err);
+        this.bookUpdated = true;
       }
     );
 
@@ -52,6 +52,7 @@ export class EditBookComponent implements OnInit {
     this.getBookService.getoneBook(this.bookid).subscribe(
       res =>{
         this.book = JSON.parse(JSON.stringify(res));
+        this.bookUpdated = true;
       },err =>{
         console.log("getonebook in edit book component failed");
         console.log(err);

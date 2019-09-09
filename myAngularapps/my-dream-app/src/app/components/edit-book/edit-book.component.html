@@ -1,1 +1,87 @@
-<p>edit-book works!</p>
+<div class="container">
+
+    <div [hidden] ="!bookUpdated"> 
+        <h3 class="headerbook">
+           Update Book Information
+        </h3>
+        <div class="headerbook">
+            <form #addbook = "ngForm" class="example-form" (ngSubmit) = "onsumbit(addbook.value)">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="New Book Tile" type="text" value=""  required  [(ngModel)] = "book.title" [ngModelOptions]="{standalone: true}">
+                    </mat-form-field>
+
+                    <mat-form-field class="Author">
+                            <input matInput placeholder="Author"  type="text" value=""  required  [(ngModel)] = "book.author" [ngModelOptions]="{standalone: true}">
+                          </mat-form-field>
+                          <mat-form-field class="publisher">
+                                <input matInput placeholder="publisher"  type="text" value="" [(ngModel)] = "book.publisher" [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+                              <mat-form-field class="dateclass">
+                                <input matInput placeholder="date"  type="date" required  value="" [(ngModel)] = "book.publicationDate" [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+                              <mat-form-field class="category">
+                                <mat-label> category</mat-label>
+                                <select matNativeControl required [(ngModel)]="book.category" [ngModelOptions]="{standalone: true}">
+                                  <option value="Management">Management</option>
+                                  <option value="Fiction">Fiction</option>
+                                  <option value="Engineering">Engineering</option>
+                                  <option value="Programming">Programming</option>
+                                  <option value="Other">Other</option>
+                                </select>
+                              </mat-form-field>
+                              <mat-form-field class="Format">
+                                <mat-label> Format</mat-label>
+                                <select matNativeControl required [(ngModel)]="book.format" [ngModelOptions]="{standalone: true}">
+                                  <option value="paperback">paperback</option>
+                                  <option value="hardcover">hardcover</option>
+                                </select>
+                              </mat-form-field>
+                              
+                              <mat-form-field class="pageNumber">
+                                <input matInput  placeholder="pageNumber"  value="" required  [(ngModel)] = "book.numberOfPages" [ngModelOptions]="{standalone: true}" >
+                              </mat-form-field>
+
+                              <mat-form-field class="isbn">
+                                <input matInput type="text" placeholder="isbn"   value=""  required  [(ngModel)] = "book.isbn"  [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+
+                              <mat-form-field class="listPrice">
+                                <input matInput   value=""  placeholder="listPrice" required  [(ngModel)] = "book.listPrice" [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+
+                              <mat-form-field class="ourPrice">
+                                <input matInput  value="" placeholder="ourPrice"    required  [(ngModel)] = "book.ourPrice" [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+                              <mat-form-field class="shippingWeight">
+                                <input matInput  value="" placeholder="shippingWeight"    required  [(ngModel)] = "book.shippingWeight" [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+                              <mat-form-field class="language">
+                                <input matInput  value="" placeholder="language"    required  [(ngModel)] = "book.language" [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+
+                              <mat-form-field class="inStockNumber">
+                                <input matInput  value="" placeholder="inStockNumber"    required  [(ngModel)] = "book.inStockNumber" [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+                              <mat-slide-toggle
+                              class="example-margin"
+                              [color]="color"
+                              [checked]="checked"
+                              [disabled]="disabled"   [(ngModel)]="book.active"  [ngModelOptions]="{standalone: true}" >
+                          Active
+                          </mat-slide-toggle>
+                              <mat-form-field class="description">
+                                <input matInput  value="" placeholder="description"    required  [(ngModel)]="book.description"  [ngModelOptions]="{standalone: true}">
+                              </mat-form-field>
+                              Image &nbsp;
+                              <input id="tile" type="file" id="bookImage" name="bookImage" (change)="uploadImageService.fileChangeEvent($event)">
+                              <br><br> 
+                             <br/>
+                              <button mat-button class ="addbutton" type="submit" value="submit">Update Book</button>    
+                              
+            </form>
+        </div> 
+    </div>
+    <div [hidden] ="bookUpdated">
+      Update Book succesfully.
+         </div>
+</div>

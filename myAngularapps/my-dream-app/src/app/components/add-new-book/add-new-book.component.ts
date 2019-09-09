@@ -26,6 +26,7 @@ export class AddNewBookComponent implements OnInit {
          let strid = JSON.stringify(a.id);
          let inval = parseInt(strid);
         this.uploadImageService.upload(inval);
+        this.bookAdded = true;
       },
       err =>{
 

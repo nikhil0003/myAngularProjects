@@ -20,7 +20,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import{AddBookService} from 'src/app/service/add-book.service';
 import {UploadImageService} from 'src/app/service/upload-image.service';
-import { BookListComponent } from './components/book-list/book-list.component';
+import { BookListComponent ,DialogResultExampleDialog} from './components/book-list/book-list.component';
 import{GetBookListService} from 'src/app/service/get-book-list.service';
 import {MatTableModule} from '@angular/material/table';
 import { ViewBookComponent } from './components/view-book/view-book.component';
@@ -28,6 +28,8 @@ import{GetBookService} from 'src/app/service/get-book.service';
 import {MatListModule} from '@angular/material/list';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 import {EditBookService} from 'src/app/service/edit-book.service';
+import {MatDialogModule} from '@angular/material/dialog';
+import {RemoveBookService} from 'src/app/service/remove-book.service';
 
 
 
@@ -42,8 +44,10 @@ import {EditBookService} from 'src/app/service/edit-book.service';
     AddNewBookComponent,
     BookListComponent,
     ViewBookComponent,
-    EditBookComponent
+    EditBookComponent,
+    DialogResultExampleDialog
   ],
+  entryComponents: [DialogResultExampleDialog],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -57,9 +61,17 @@ import {EditBookService} from 'src/app/service/edit-book.service';
     MatSelectModule,
     MatSlideToggleModule,
     MatTableModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
   ],
-  providers: [LoginService,CookieService,AddBookService,UploadImageService,GetBookListService,GetBookService,EditBookService],
+  providers: [LoginService,
+    CookieService,
+    AddBookService,
+    UploadImageService,
+    GetBookListService,
+    GetBookService,
+    EditBookService,
+    RemoveBookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

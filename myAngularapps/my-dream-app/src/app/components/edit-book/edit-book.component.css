@@ -1,0 +1,80 @@
+
+.headernewbook{
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 50%
+}
+  
+  .example-full-width {
+    width: 80%;
+    box-sizing: border-box;
+    float: left;
+  }
+  .Author{
+    width: 48%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+   box-sizing: border-box;
+   border: 1px;
+   
+  }
+
+  .publisher{
+    width: 49%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    border: 1px;
+   }
+   .dateclass{
+    width: 30%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    border: 1px;
+   }
+   .category{
+    width: 49%;
+   margin: 10px;
+   margin-left: 20px;
+   }
+   .pageNumber{
+    margin-left: 20px; 
+   }
+
+   .isbn{
+    width: 30%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    border: 1px;
+   }
+   .listPrice{
+    margin-left: 20px; 
+   }
+   .ourPrice{
+    margin-left: 20px; 
+   }
+   .shippingWeight{
+    margin-left: 20px; 
+   }
+   .language{
+    margin-left: 20px; 
+   }
+   .inStockNumber{
+    margin-left: 20px; 
+   }
+   .Active{
+    margin-left: 20px; 
+   }
+   .description{
+    margin-left: 20px; 
+   }
+   .addbutton{
+     background-color: blue;
+   }
